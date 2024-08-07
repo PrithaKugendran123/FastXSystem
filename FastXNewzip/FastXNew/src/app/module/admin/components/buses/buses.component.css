@@ -1,0 +1,74 @@
+.container {
+  margin-top: 20px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.textt {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.edit-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form .form-row {
+  margin-bottom: 15px;
+}
+
+.edit-form .form-check {
+  display: flex;
+  align-items: center;
+}
+
+.edit-form .form-check-label {
+  margin-left: 5px;
+}
+
+.edit-form .btn {
+  margin-top: 10px;
+}
+
+.edit-form .btn + .btn {
+  margin-left: 10px;
+}
+
+.table {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 10px;
+}
+
+.table th {
+  background-color: coral;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.edit-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}

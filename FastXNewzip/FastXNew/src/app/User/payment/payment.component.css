@@ -1,0 +1,71 @@
+.card {
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: coral; /* Coral background color */
+}
+
+.card-body {
+  padding: 30px;
+  color: #fff; /* White text color */
+}
+
+.card-title {
+  color: #fff; /* White text color */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+.ticket-container {
+  border: 50px solid coral; /* Thick orange border */
+  padding: 20px; /* Padding inside the border */
+  border-radius: 10px; /* Rounded corners (optional) */
+  background-color: #fff; /* White background for better contrast */
+  max-width: 600px; /* Maximum width of the ticket */
+  margin: 20px auto; /* Center the ticket horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visual effect */
+  text-align: center; /* Center text alignment */
+}
+/* Customize toast appearance */
+.toast-success {
+  background-color: #28a745; /* Green background for success */
+}
+
+.toast-error {
+  background-color: #dc3545; /* Red background for error */
+}
+
+.ticket-container h1 {
+  color: #333; /* Dark text color for the title */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.ticket-container p {
+  margin: 10px 0; /* Space between paragraphs */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.ticket-container strong {
+  color: #000; /* Bold text color for labels */
+}
+
+
+label {
+  font-weight: bold;
+  color: #fff; /* White text color */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-primary:disabled {
+  background-color: #adb5bd;
+}

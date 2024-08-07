@@ -1,0 +1,43 @@
+<div *ngIf="bookings && bookings.length; else noBookings">
+  <table>
+    <thead>
+      <tr>
+        <th>Bus Name</th>
+        <th>Bus Number</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Number of Seats</th>
+        <th>Total Cost</th>
+        <th>Booking Date</th>
+        <th>Pick Up</th>
+        <th>Drop Point</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookings">
+        <td>{{ booking.BusName }}</td>
+        <td>{{ booking.BusNumber }}</td>
+        <td>{{ booking.UserName }}</td>
+        <td>{{ booking.Email }}</td>
+        <td>1</td>
+        <td>{{ booking.TotalCost }}</td>
+        <td>{{ booking.BookingDate | date }}</td>
+        <td>{{ booking.PickUp }}</td>
+        <td>{{ booking.DropPoint }}</td>
+        <td>
+          <!-- Cancel latest booking button -->
+          <button (click)="cancelLatestBooking()" class="btn btn-danger">Cancel Latest Booking</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #noBookings>
+  <div class="no-bookings">
+    <h1>No bookings available.</h1>
+    <button (click)="navigateToBooking()" class="btn btn-primary">Book Now</button>
+    <img src="assets/images/bg bus.jpg" alt="No Bookings" class="no-bookings-image">
+  </div>
+</ng-template>
+

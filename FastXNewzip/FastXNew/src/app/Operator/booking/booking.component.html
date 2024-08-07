@@ -1,0 +1,34 @@
+<app-dash></app-dash>
+<h1>Bookings Management</h1>
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th>Booking ID</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Bus Name</th>
+        <th>Bus Number</th>
+        <th>Total Seats</th>
+        <th>Total Cost</th>
+        <th>Booking Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookingWithBusDetails">
+        <td>{{ booking.BookingId }}</td>
+        <td>{{ booking.UserName }}</td>
+        <td>{{ booking.Email }}</td>
+        <td>{{ booking.BusName }}</td>
+        <td>{{ booking.BusNumber }}</td>
+        <td>{{ booking.TotalSeats || 1 }}</td>
+        <td>{{ booking.TotalCost | number:'1.0-0' }}</td>
+        <td>{{ booking.BookingDate | date:'shortDate' }}</td>
+        <td>
+          <button (click)="delRecord(booking.BookingId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

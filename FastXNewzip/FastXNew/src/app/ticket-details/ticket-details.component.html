@@ -1,0 +1,21 @@
+<div class="container mt-5 ticket-details-container">
+  <h2 class="ticket-details-heading">Ticket Details</h2>
+  <div class="booking-section">
+    <div *ngIf="busDetails || schedule" class="summary-card">
+      <div *ngIf="busDetails" class="bus-details">
+        <p><strong>Bus Name:</strong> {{ busDetails.BusName }}</p>
+        <p><strong>Bus Number:</strong> {{ busDetails.BusNumber }}</p>
+        <p><strong>Bus Type:</strong> {{ busDetails.BusType }}</p>
+        <p><strong>Seat Type:</strong> {{ busDetails.SeatType }}</p>
+        <p><strong>PickUp Point:</strong> {{ busDetails.PickUp }}</p>
+        <p><strong>Dropping Point:</strong> {{ busDetails.DropPoint }}</p>
+      </div>
+
+      <div *ngIf="schedule" class="schedule-details">
+        <p><strong>Departure Time:</strong> {{ schedule.DepartureTime }}</p>
+        <p><strong>Arrival Time:</strong> {{ schedule.ArrivalTime }}</p>
+        <p><strong>Total Fare :</strong> {{ schedule.Fare }}</p>
+      </div>
+    </div>
+  </div>
+</div>

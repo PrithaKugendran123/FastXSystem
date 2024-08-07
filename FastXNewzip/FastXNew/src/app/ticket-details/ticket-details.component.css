@@ -1,0 +1,56 @@
+.ticket-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .ticket {
+    border-top: 60px solid coral;
+    border-right: 30px solid coral;
+    border-left:30px solid coral;
+    border-bottom: 30px solid coral;
+    padding: 20px;
+    display: inline-block;
+    text-align: left;
+    background-color: white; /* Add a background color */
+    border-radius: 5px; /* Slightly round the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    width: 80%; /* Set a fixed width for the ticket */
+    max-width: 600px; /* Set a maximum width for the ticket */
+    height: auto; /* Auto height for content */
+    margin: 0 auto; /* Center the ticket horizontally */
+    font-family: Arial, sans-serif; /* Change the font style */
+  }
+  
+  .ticket h1 {
+    color: darkorange; /* Change the color of the title */
+    font-size: 24px; /* Increase the font size of the title */
+    text-align: center; /* Center align the title */
+  }
+  
+  .ticket p {
+    font-size: 18px; /* Increase the font size of the paragraphs */
+    color: #333; /* Change the text color */
+    line-height: 1.6; /* Increase the line height for better readability */
+  }
+  
+  .button-container {
+    margin-top: 20px; /* Add margin to separate the button from the ticket */
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: rgb(52, 52, 177); /* Button background color */
+    color: white; /* Change the text color to white */
+    padding: 10px 20px; /* Add some padding */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px; /* Increase the font size */
+    cursor: pointer; /* Change the cursor to pointer */
+    text-decoration: none; /* Remove underline from the link */
+    transition: background-color 0.3s; /* Add a transition effect */
+  }
+  
+  .btn:hover {
+    background-color: darkblue; /* Change the background color on hover */
+  }
+  

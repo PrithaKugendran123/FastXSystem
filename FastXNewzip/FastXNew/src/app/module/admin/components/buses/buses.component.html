@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="table-wrapper">
+    <h2 class="textt">Bus List</h2>
+    <table class="table table-warning table-striped table-hover bus-table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Bus Number</th>
+          <th>Bus Name</th>
+          <th>Seat Type</th>
+          <th>Bus Type</th>
+          <th>Pick Up</th>
+          <th>Drop Point</th>
+          <th>Charging Point</th>
+          <th>Blanket</th>
+          <th>TV</th>
+          <th>Water Bottle</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bus of buses" class="bus-item">
+          <td>{{ bus.BusNumber }}</td>
+          <td>{{ bus.BusName }}</td>
+          <td>{{ bus.SeatType }}</td>
+          <td>{{ bus.BusType }}</td>
+          <td>{{ bus.PickUp }}</td>
+          <td>{{ bus.DropPoint }}</td>
+          <td>{{ bus.ChargingPoint ? 'Yes' : 'No' }}</td>
+          <td>{{ bus.Blanket ? 'Yes' : 'No' }}</td>
+          <td>{{ bus.Tv ? 'Yes' : 'No' }}</td>
+          <td>{{ bus.WaterBottle ? 'Yes' : 'No' }}</td>
+          <td><button class="btn btn-primary edit-button" (click)="selectBus(bus)">Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="mt-5 text-white">{{ isEditing ? 'Edit Bus' : 'Add Bus' }}</h2>
+  <form (ngSubmit)="isEditing ? updateBus() : addBus()" class="edit-form mt-4 p-4 border rounded shadow-sm bg-dark">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label class="text-white">Bus Number</label>
+        <input type="text" [(ngModel)]="selectedBus.BusNumber" name="BusNumber" class="form-control" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="text-white">Bus Name</label>
+        <input type="text" [(ngModel)]="selectedBus.BusName" name="BusName" class="form-control" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label class="text-white">Seat Type</label>
+        <input type="text" [(ngModel)]="selectedBus.SeatType" name="SeatType" class="form-control" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="text-white">Bus Type</label>
+        <input type="text" [(ngModel)]="selectedBus.BusType" name="BusType" class="form-control" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label class="text-white">Pick Up</label>
+        <input type="text" [(ngModel)]="selectedBus.PickUp" name="PickUp" class="form-control" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="text-white">Drop Point</label>
+        <input type="text" [(ngModel)]="selectedBus.DropPoint" name="DropPoint" class="form-control" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <div class="form-check">
+          <input type="checkbox" [(ngModel)]="selectedBus.ChargingPoint" name="ChargingPoint" class="form-check-input">
+          <label class="form-check-label text-white">Charging Point</label>
+        </div>
+      </div>
+      <div class="form-group col-md-3">
+        <div class="form-check">
+          <input type="checkbox" [(ngModel)]="selectedBus.Blanket" name="Blanket" class="form-check-input">
+          <label class="form-check-label text-white">Blanket</label>
+        </div>
+      </div>
+      <div class="form-group col-md-3">
+        <div class="form-check">
+          <input type="checkbox" [(ngModel)]="selectedBus.Tv" name="Tv" class="form-check-input">
+          <label class="form-check-label text-white">TV</label>
+        </div>
+      </div>
+      <div class="form-group col-md-3">
+        <div class="form-check">
+          <input type="checkbox" [(ngModel)]="selectedBus.WaterBottle" name="WaterBottle" class="form-check-input">
+          <label class="form-check-label text-white">Water Bottle</label>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success">{{ isEditing ? 'Update Bus' : 'Add Bus' }}</button>
+    <button type="button" (click)="cancelEdit()" class="btn btn-secondary ml-2">Cancel</button>
+  </form>
+</div>
